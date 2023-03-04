@@ -31,16 +31,12 @@ function handleOpenImage(event) {
   }
 
   const instance = basicLightbox.create(
-    `<div class="gallery__item">
-  <a class="gallery__link" href="${event.target.getAttribute('data-source')}">
-    <img
+    `<img
       class="gallery__image"
       src="${event.target.getAttribute('data-source')}"
       data-source="${event.target.getAttribute('data-source')}"
       alt="${event.target.getAttribute('alt')}"
-    />
-  </a>
-  </div>`
+    />`
   );
 
   instance.show();
